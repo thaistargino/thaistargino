@@ -1,0 +1,356 @@
+/* DEFINIÇÕES DE FONTES*/
+
+@font-face {
+	font-family: 'Aqua Grotesque';
+	src: url('css/fontes/aqua.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'cat&fox';
+	src: url('css/fontes/cat&fox.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'PlayfairDisplay SC';
+	src: url('css/fontes/PlayfairDisplaySC-Regular.ttf') format('truetype');
+
+}
+
+@font-face{
+	font-family: 'Ideal Sans - Book';
+	src: url('css/fontes/IDEALSANS-BOOK.otf') format('truetype');
+}
+
+
+
+/*corpo da pagina*/
+
+body {
+
+	font-family: "cat&fox";
+
+	margin: 0 auto;
+	border: 0;
+	text-align: center;
+	background-color: #1d1d1d
+}
+/*menu
+nav ul {
+	padding: 0 15vw;
+	top:10px;
+	list-style: none;
+	
+}*/
+#menu{
+	opacity: 0.5;
+	position: fixed;
+	right: 0;
+	top:0%;
+	/*width: 60em;*/
+	margin-top: 0;}
+
+#menu {
+	width: 100%;
+/*	margin-right: 12%;
+	margin-left: 12%;*/
+	position: fixed;
+}
+	.menu_hover {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+}
+.menu_hover:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	right: 100%;
+	bottom: 0;
+	background: #;
+	height: 4px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.menu_hover:hover:before, .menu_hover:focus:before, .menu_hover:active:before {
+	left: 0;
+	right: 0;
+}
+
+ul.menu_hover li {
+float:left;
+background: #333;
+padding:0px;
+
+
+border-color: #404040 #1a1a1a #1a1a1a #505050;
+}
+ul.menu_hover li a{
+display: block;
+padding: 5px 30px;
+color: #fff;
+font-size:17px;
+font-family:Ideal Sans - Book;
+text-decoration: none;
+font-weight: bold;
+}
+ul.menu_hover li a:hover, ul.menu_hover li:hover{
+color: #fff;
+background: #1d1d1d;
+border-top-color: #5db1e0 !important;
+border-left-color: #5db1e0;
+}
+
+/*nav ul {
+	list-style: none;
+	background-color: #fafafa;
+	text-align: 50px;
+	margin:0 auto;
+	padding: 0;
+	height: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+nav li {
+	font-family: 'Aqua Grotesque';
+	
+	text-align: center;
+	font-size: 16px;
+	line-height: 48px;
+	height: 150px;
+	width: 20%;
+}
+
+nav a {
+	height: 75px;
+	text-decoration: none;
+	color:#080B10;
+	display: block;
+	transition: 1s background-color;
+
+}
+
+nav a:focus {
+	background-color:#FAFAFA;
+	color: #fafafa;
+	cursor: default;
+}	
+ 
+
+/*.teta {
+	font-family: "Aqua Grotesque";
+	font-weight: medium;
+	color: #080B10;
+	text-align: center;
+	font-size: 70px;
+}
+
+.tete {
+	font-family: "Aqua Grotesque";
+	font-weight: medium;
+	color: #080B10;
+	/*text-align: 120px;
+	font-size: 70px;
+*/
+
+.imgperfil {
+
+	width: 480px;
+	height:480px;
+}
+
+.about {
+	
+	background-color: #;
+  padding: 20vh;
+}
+
+.teta{
+	/*border: 2px solid black;
+	/*margin-left: 12%;	
+	margin-right: 12%;
+	height: 600px; 
+	padding-top: 50px;
+	z-index: 1;*/
+
+	/*Position absolute define que o elemento fica naquela posição independente de qualquer coisa*/
+	position: absolute; 
+	z-index: 1;
+   top: 200px; 
+   /* Espaçamento da caixinha de texto*/
+   margin-left: 2%;
+   padding-left: 3%;
+   padding-right: 3%; 
+   padding-top: 1%;
+   padding-bottom: 1%;
+   color: #fafafa; /*Cor da letra*/
+   font-family: "Aqua Grotesque";
+   font-weight: medium;
+   text-align: center;
+   font-size: 70px;
+
+}
+
+.tete {
+	
+	position: absolute; 
+   top: 300px; 
+   left: 28%;
+   
+   color: #f0bdc4; /*Cor da letra*/
+   font-family: "Aqua Grotesque";
+   font-weight: medium;
+   text-align: center;
+   font-size: 70px;
+   z-index: 1;
+}
+
+.animation {
+	opacity: 0;
+	transform: translate3d(-100px,0,0);
+	transition: .9s;
+}
+
+.animation-start {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+/*-------------------------------------skills--------------------------------------------*/
+
+#skills{
+	font-family: "cat&fox"
+	font-weight: normal;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	font-size: 50px;
+	color: #f0bdc4;
+	text-align: center;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 65px 65px 65px;
+  grid-column-gap: 10%;
+  grid-row-gap: 10px;
+  background-color: #1d1d1d;
+  padding-top: 0px;
+  padding-bottom: 250px;
+  padding-right: 30%;
+  padding-left: 32%;
+}
+.grid-item {
+  background-color: #fafafa;
+  height: 0px;
+  border: none;
+  font-size: 40px;
+  text-align: center;
+}
+
+.grid-item-2 {
+  background-color: #fafafa;
+  height: 0px;
+  padding-top: 0px;
+  border: none;
+  font-family: 'Aqua Grotesque';
+  font-size: 45px;
+  text-align: center;
+}
+
+/*---------------------------------trabalhos---------------------------*/
+
+#trabalhos{
+	font-family: "cat&fox"
+	font-weight: normal;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	font-size: 50px;
+	color: #f0bdc4;
+	text-align: center;
+}
+
+
+.grid_trab {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 250px 250px 250px;
+  grid-column-gap: 10%;
+  grid-row-gap: 10px;
+  background-color: #1d1d1d;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  padding-right: 10%;
+  padding-left: 10%;
+
+}
+
+
+
+#trabalhos img {
+	width: 300px;
+	height:300px;
+	opacity: 0.5;
+    transition: 0.5s;
+}
+
+#trabalhos img:hover {
+	opacity: 3.0;}
+
+
+
+    
+    /*---------------------------------contato---------------------------*/
+
+
+#contact{
+	font-family: "cat&fox"
+	font-weight: normal;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	font-size: 50px;
+	color: #f0bdc4;
+	text-align: center;
+}
+.grid_cont {
+  display: grid;
+  width: 55%;
+  grid-template-columns: 300px 450px;
+  grid-column-gap: 10%;
+  grid-row-gap: 0px;
+  background-color: #1d1d1d;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-right: 75%;
+  padding-left: 25%;
+}
+
+#contact img {
+	width: 100px;
+	height:100px;
+}
+
+#contact input{
+
+	width: 100px;
+	height:100px;
+}
+
+.grid-letra {
+  height: 7px;
+  padding-top: 1x;
+  border: none;
+  font-family: 'Aqua Grotesque';
+  font-size: 20px;
+  text-align: none;
+  padding-right: 20%;
+  padding-left: 0%;
+}
+
+
